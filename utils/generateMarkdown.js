@@ -7,16 +7,16 @@ let licenseSection = ""
 function renderLicenseBadge(data) {
   switch (data.license) {
     case "MIT":
-      badgeURL = "https://img.shields.io/badge/license-MIT-international.svg";
+      badgeURL = "https://img.shields.io/badge/license-MIT-blue.svg";
       break;
     case "APACHE 2.0":
-      badgeURL = "https://img.shields.io/badge/license-APACHE%202.0-international.svg";
+      badgeURL = "https://img.shields.io/badge/license-APACHE%202.0-blue.svg";
       break;
     case "GPL 3.0":
-      badgeURL = "https://img.shields.io/badge/license-GPL%203.0-international.svg";
+      badgeURL = "https://img.shields.io/badge/license-GPL%203.0-blue.svg";
       break;
     case "BSD 3":
-      badgeURL = "https://img.shields.io/badge/license-BSD%203-international.svg";
+      badgeURL = "https://img.shields.io/badge/license-BSD%203-blue.svg";
       break;
     default: badgeUrl = "";
   }
@@ -48,36 +48,79 @@ function renderLicenseLink(data) {
 // If there is no license, return an empty string
 function renderLicenseSection(data) {
   if (data.license !== "None"){
-    licenseSection = `![GitHub License](${renderLicenseBadge(data)})](${renderLicenseLink(data)})`
+    licenseSection = `[![GitHub License](${renderLicenseBadge(data)})](${renderLicenseLink(data)})`
   } else {
     licenseSection = '';
   }
+  return licenseSection;
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-  ${renderLicenseSection(data)}
+return `# ${data.title}
+${renderLicenseSection(data)}
 
-  ## Description
+## Description
 
-  ${data.descrip}
+${data.descrip}
 
   ## Table Of Contents
-*[Installation](#!installation)
-*[Usage](#usage)
-*[License](#license)
-*[Contributing](#contributing)
-*[Tests](#tests)
-*[Questions](#questions)
+
+* [Installation](#!installation)
+
+* [Usage](#usage)
+
+* [License](#license)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
+================================================
 
 ## Installation
 
-To install the necessary dependencies, run the following command:
+To install the necessary dependencies, please run the following command:
 
 \`\`\`
 ${data.install}
 \`\`\`
+
+================================================
+
+## Usage
+
+${data.usage}
+
+================================================
+
+## License
+
+This project is licensed under the ${data.license} license.
+
+================================================
+
+## Contributing
+
+${data.contribute}
+
+================================================
+
+## Tests
+
+To test if the dependencies are all installed, please run the following command:
+
+\`\`\`
+${data.test}
+\`\`\`
+
+================================================
+
+## Questions
+
+If you have any questions please reach out to me [HERE](mailto:${data.emailAddress}). You can find more of my work at [MY GITHUB](https://www.github.com/${data.gitUser}/).
 
 
 `;
