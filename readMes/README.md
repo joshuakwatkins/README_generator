@@ -7,7 +7,7 @@ This is a demo run-through of the code to include with my homework.
 
   ## Table Of Contents
 
-* [Installation](#!installation)
+* [Installation](#installation)
 
 * [Usage](#usage)
 

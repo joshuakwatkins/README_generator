@@ -11,7 +11,7 @@ This application generates a basic README.md file for the user based on a series
 
   ## Table Of Contents
 
-* [Installation](#!installation)
+* [Installation](#installation)
 
 * [Usage](#usage)
 
