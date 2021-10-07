@@ -3,7 +3,7 @@
 
 let badgeURL = "";
 let licenseURL = "";
-let licenseSection = ""
+let licenseSection = "";
 function renderLicenseBadge(data) {
   switch (data.license) {
     case "MIT":
@@ -12,8 +12,8 @@ function renderLicenseBadge(data) {
     case "APACHE 2.0":
       badgeURL = "https://img.shields.io/badge/license-APACHE%202.0-blue.svg";
       break;
-    case "GPL 3.0":
-      badgeURL = "https://img.shields.io/badge/license-GPL%203.0-blue.svg";
+    case "GNU GPLv3":
+      badgeURL = "https://img.shields.io/badge/license-GNU%20GPLv3-blue.svg";
       break;
     case "BSD 3":
       badgeURL = "https://img.shields.io/badge/license-BSD%203-blue.svg";
@@ -33,7 +33,7 @@ function renderLicenseLink(data) {
     case "APACHE 2.0":
       licenseURL = "https://opensource.org/licenses/Apache-2.0";
       break;
-    case "GPL 3.0":
+    case "GNU GPLv3":
       licenseURL = "https://www.gnu.org/licenses/gpl-3.0";
       break;
     case "BSD 3":

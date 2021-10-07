@@ -3,7 +3,11 @@
 
 ## Description
 
-This application generates a basic README.md file for the user based on a series of prompts.
+This application generates a basic README.md file for the user based on a series of prompts. The goal is to have a quickly assembled and professional README.md that is tailored to a projects needs. This removes pretty much any barrier to entry for a well crafted README.md and thus there is no excuse for not including a README with every project. I may add a query for a picture link to include a screenshot of the application in the readme automatically.
+
+[Here is a link to a video demonstating how it works.](./Video/README_generator.mp4)
+
+[![Terminal Screenshot](./IMG/terminal-screenshot.png)](./Video/README_generator.mp4)
 
   ## Table Of Contents
 
